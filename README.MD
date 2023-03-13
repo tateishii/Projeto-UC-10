@@ -12,6 +12,7 @@
 ## Dentro desse editor de texto foi inserido o seguinte código para instalação do ADMINER e o WORDPRESS:
 
 version: '3.1'
+
 services:
    
     db:
