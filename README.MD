@@ -30,6 +30,7 @@ services:
         expose:
             - '3306'
    
+    
     wordpress:
         image: wordpress
         restart: always
@@ -43,7 +44,8 @@ services:
             - '8084:80'
         volumes:
             - ~/site-wordpress:/var/www/html
-    adminer:
+    
+    adminer:
         image: adminer
         restart: always
         ports:
