@@ -30,16 +30,16 @@ services:
             - '3306'                
     wordpress:
         image: wordpress
-        restart: always
-        environment:
+        restart: always
+        environment:
             WORDPRESS_DB_HOST: db
-            WORDPRESS_DB_USER: root
+            WORDPRESS_DB_USER: root
             WORDPRESS_DB_PASSWORD: senac@123
-            WORDPRESS_DB_NAME: site
+            WORDPRESS_DB_NAME: site
             WORDPRESS_TABLE_PREFIX: ps
         ports:
             - '8084:80'
-        volumes:
+        volumes:
             - ~/site-wordpress:/var/www/html    
     adminer:
         image: adminer
