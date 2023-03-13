@@ -10,43 +10,40 @@
 ## Depois de instalar o DOCKER dentro do cockpit usando o seguinte código: sudo apt install docker, Instalei o DOCKER-COMPOSE com o código: sudo apt install docker-compose.
 ## Para instalar o ADMINER e o WORDPRESS criei um editor de texto usando VIM com o seguinte código: vim docker-compose.yml.
 ## Dentro desse editor de texto foi inserido o seguinte código para instalação do ADMINER e o WORDPRESS:
-
-
 version: '3.1'
 services:
- 
-    
+   
     db:
         image: mysql:latest
-        restart: always        
-        environment:        
-            MYSQL_ROOT_PASSWORD: senac@123            
-            MYSQL_DATABASE: site            
-        ports:        
-            - '6556:3306'            
-        volumes:        
-            - ~/site-db:/var/lib/mysql 
-        expose:
-            - '3306'                
-    
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: senac@123
+            MYSQL_DATABASE: site
+        ports:
+            - '6556-3306'
+        volumes:
+            - ~/site-db:/var/lib/mysql
+        expose:
+            - '3306'
+           
     wordpress:
-        image: wordpress
-        restart: always
-        environment:
-            WORDPRESS_DB_HOST: db
-            WORDPRESS_DB_USER: root
-            WORDPRESS_DB_PASSWORD: senac@123
-            WORDPRESS_DB_NAME: site
-            WORDPRESS_TABLE_PREFIX: ps
-        ports:
-            - '8084:80'
-        volumes:
-            - ~/site-wordpress:/var/www/html    
+        image: wordpress
+        restart: always
+        environment:
+            WORDPRESS_DB_HOST: db
+            WORDPRESS_DB_USER: root
+            WORDPRESS_DB_PASSWORD: senac@123
+            WORDPRESS_DB_NAME: site
+            WORDPRESS_TABLE_PREFIX: ps
+        ports:
+            - '8084:80'
+        volumes:
+            - ~/site-wordpress:/var/www/html
     adminer:
-        image: adminer
-        restart: always
-        ports:
-            - '8085:8080'
+        image: adminer
+        restart: always
+        ports:
+            - '8085:8080'
 
 ## Depois saia com ESC, :wq “wq” para sair e salvar.
 ## E para executar o código se usa o: docker-compose up
