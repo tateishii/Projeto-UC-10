@@ -28,6 +28,7 @@ services:
             - ~/site-db:/var/lib/mysql 
         expose:
             - '3306'                
+    
     wordpress:
         image: wordpress
         restart: always
