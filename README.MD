@@ -10,6 +10,7 @@
 ## Depois de instalar o DOCKER dentro do cockpit usando o seguinte código: sudo apt install docker, Instalei o DOCKER-COMPOSE com o código: sudo apt install docker-compose.
 ## Para instalar o ADMINER e o WORDPRESS criei um editor de texto usando VIM com o seguinte código: vim docker-compose.yml.
 ## Dentro desse editor de texto foi inserido o seguinte código para instalação do ADMINER e o WORDPRESS:
+
 version: '3.1'
 services:
    
