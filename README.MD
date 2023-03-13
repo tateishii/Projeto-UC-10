@@ -17,7 +17,8 @@ services:
  
     
     db:
-        image: mysql:latest
+        
+        image: mysql:latest
         restart: always
         environment:
             MYSQL_ROOT_PASSWORD: senac@123
@@ -29,7 +30,7 @@ services:
         expose:
             - '3306'
    
-    wordpress:
+    wordpress:
         image: wordpress
         restart: always
         environment:
