@@ -17,31 +17,17 @@ services:
  
     
     db:
-        
         image: mysql:latest
-        
-        restart: always
-        
-        environment:
-        
-            MYSQL_ROOT_PASSWORD: senac@123
-            
-            MYSQL_DATABASE: site
-            
-        ports:
-        
-            - '6556:3306'
-            
-        volumes:
-        
-            - ~/site-db:/var/lib/mysql
-            
+        restart: always        
+        environment:        
+            MYSQL_ROOT_PASSWORD: senac@123            
+            MYSQL_DATABASE: site            
+        ports:        
+            - '6556:3306'            
+        volumes:        
+            - ~/site-db:/var/lib/mysql 
         expose:
-        
-            - '3306'
-            
-   
-    
+            - '3306'                
     wordpress:
         image: wordpress
         restart: always
@@ -54,8 +40,7 @@ services:
         ports:
             - '8084:80'
         volumes:
-            - ~/site-wordpress:/var/www/html
-    
+            - ~/site-wordpress:/var/www/html    
     adminer:
         image: adminer
         restart: always
