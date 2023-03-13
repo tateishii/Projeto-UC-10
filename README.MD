@@ -19,16 +19,27 @@ services:
     db:
         
         image: mysql:latest
+        
         restart: always
+        
         environment:
+        
             MYSQL_ROOT_PASSWORD: senac@123
+            
             MYSQL_DATABASE: site
+            
         ports:
+        
             - '6556:3306'
+            
         volumes:
+        
             - ~/site-db:/var/lib/mysql
+            
         expose:
+        
             - '3306'
+            
    
     
     wordpress:
