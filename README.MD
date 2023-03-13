@@ -71,6 +71,4 @@ services:
 
 ## O ADMINER é uma ferramenta de gerenciamento de Banco de Dados baseados em PHP.
 
-## E o WORDPRESS é uma das ferramentas mais simples para criar e desenvolver um site.#� �P�r�o�j�e�t�o�-�U�C�-�1�0�
-�
-�
+## E o WORDPRESS é uma das ferramentas mais simples para criar e desenvolver um site.
