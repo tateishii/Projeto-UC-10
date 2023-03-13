@@ -11,9 +11,11 @@
 ## Para instalar o ADMINER e o WORDPRESS criei um editor de texto usando VIM com o seguinte código: vim docker-compose.yml.
 ## Dentro desse editor de texto foi inserido o seguinte código para instalação do ADMINER e o WORDPRESS:
 
+
 version: '3.1'
 services:
  
+    
     db:
         image: mysql:latest
         restart: always
@@ -27,7 +29,6 @@ services:
         expose:
             - '3306'
    
-
     wordpress:
         image: wordpress
         restart: always
